@@ -18,10 +18,14 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "dev-start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "autoprefix": "postcss -u autoprefixer -r src/**/**/*.css -w",
+    "dev-scss": "npm run scss && npm run autoprefix",
+    "scss": "node-sass -rw src -o src --output-style expanded --source-comments false",
+    "start": "concurrently \"npm:dev-*\""
   },
   "eslintConfig": {
     "extends": [
@@ -40,5 +44,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "concurrently": "^5.3.0",
+    "node-sass": "^5.0.0",
+    "postcss": "^7.0.35"
   }
 }
