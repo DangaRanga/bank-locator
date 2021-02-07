@@ -24,12 +24,12 @@ function Form({ login }: { login: boolean }) {
           formState.isBank ? "assets/agreement.svg" : "assets/location-icon.svg"
         }
         id="form-icon"
+        alt="form-icon"
       ></img>
       <h1>{login ? "Login" : "Sign Up"}</h1>
       <hr id="form-hr"></hr>
       <form>
         <div className="input-field">
-          <img src=""></img>
           <input
             value={formState.email}
             onChange={(e) =>
@@ -44,7 +44,6 @@ function Form({ login }: { login: boolean }) {
         </div>
         {formState.isBank && login && (
           <div className="input-field">
-            <img src=""></img>
             <input
               value={formState.name}
               onChange={(e) =>
@@ -60,7 +59,6 @@ function Form({ login }: { login: boolean }) {
         )}
         {formState.isBank && (
           <div className="input-field">
-            <img src=""></img>
             <input
               value={formState.bankName}
               onChange={(e) =>
@@ -75,7 +73,6 @@ function Form({ login }: { login: boolean }) {
           </div>
         )}
         <div className="input-field">
-          <img src=""></img>
           <input
             value={formState.password}
             onChange={(e) =>

@@ -6,6 +6,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 
 // Import pages
 import Browse from "../pages/Browse";
+import BankSearch from "../pages/BankSearch";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
 import Home from "../pages/home/home";
@@ -25,6 +26,7 @@ function RoutesClient() {
       </Route>
       <Route path="/banks" exact component={NearbyBanks}></Route>
       <Route path="/browse" exact component={Browse}></Route>
+      <Route path="/search" exact component={BankSearch}></Route>
       <Redirect to="/" />
     </Switch>
   );

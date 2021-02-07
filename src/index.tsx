@@ -7,6 +7,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
 
 // CSS imports
+
 import "./index.css";
 
 // Other
