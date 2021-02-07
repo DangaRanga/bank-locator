@@ -4,7 +4,7 @@
   max-height: 100vh;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 4rem 1fr  3.5rem;
+  grid-template-rows: 4rem 1fr 3.5rem;
   grid-template-areas: "top" "content" "bottom";
 }
 
@@ -69,7 +69,7 @@
 #home-page #content #latest-blogs .link {
   font-size: 0.7rem;
   font-weight: 600;
-  color: #1182D4;
+  color: #1182d4;
 }
 
 #home-page #bottom-nav {
