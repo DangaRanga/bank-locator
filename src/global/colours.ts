@@ -8,6 +8,9 @@ export const colours = {
 	grey3: "#C4C4C4",
 	grey4: "#939393",
 	grey5: "#535954",
+    star: "#F2DB07",
+    green:"#24BB71",
+    listTile: "#F3FBFF"
 };
 
 export default colours;

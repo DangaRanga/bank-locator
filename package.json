@@ -18,14 +18,16 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "dev-start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "autoprefix": "postcss -u autoprefixer -r src/**/**/*.css -w",
-    "dev-scss": "npm run scss && npm run autoprefix",
-    "scss": "node-sass -rw src -o src --output-style expanded --source-comments false",
-    "start": "concurrently \"npm:dev-*\""
+    "autoprefix": "postcss src/**/**/*.css -r -u autoprefixer",
+    "scss": "node-sass src -o src --output-style expanded --source-comments false",
+    "react-start": "react-scripts start",
+    "dev-react": "yarn react-start",
+    "dev-css": "nodemon -e css -x \"npm run autoprefix\"",
+    "dev-scss": "nodemon -e sass,scss -x \"npm run scss\"",
+    "start": "concurrently \"npm run dev-scss\" && npm run dev-css && npm run dev-react"
   },
   "eslintConfig": {
     "extends": [
@@ -49,6 +51,8 @@
     "autoprefixer": "^9.8.6",
     "concurrently": "^5.3.0",
     "node-sass": "^5.0.0",
-    "postcss": "^7.0.35"
+    "nodemon": "^2.0.7",
+    "postcss": "^8.2.5",
+    "postcss-cli": "^8.3.1"
   }
 }

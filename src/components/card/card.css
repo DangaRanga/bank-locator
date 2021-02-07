@@ -1,0 +1,15 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 14rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.card .feature-img {
+  height: 16rem;
+  width: 14rem;
+  object-fit: cover;
+  border-radius: 5px;
+}

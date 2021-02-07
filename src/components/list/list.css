@@ -1,0 +1,22 @@
+.list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list.horizontal {
+  flex-direction: row;
+  overflow-x: auto;
+}
+
+.list.horizontal > * {
+  margin-right: 1rem;
+}
+
+.list.vertical {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.list.vertical > * {
+  margin-bottom: 1rem;
+}
