@@ -12,12 +12,12 @@ import "./bank_search.css";
 import bank1 from "../../assets/bank1.png";
 import bank2 from "../../assets/bank2.png";
 import bank3 from "../../assets/bank3.png";
-import banksData from "../../data/bankData.json";
+import bankData from "../../data/bankData.json";
 
 function BankSearch() {
 	var featuredBanks = [];
 
-	for (const bank of banksData) {
+	for (const bank of bankData) {
 		featuredBanks.push(
 			<ListTile>
 				<img className="bank-pic" src={bank1} alt="" />

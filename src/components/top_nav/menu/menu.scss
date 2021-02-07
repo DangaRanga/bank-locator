@@ -1,0 +1,39 @@
+#drawer {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	z-index: 2;
+	position: fixed;
+	left: 2rem;
+	margin-top: 1.3rem;
+	width: 55vw;
+
+
+	#menu-items {
+        transition: all 1s;
+
+		flex-grow: 1;
+		background-color: white;
+		box-shadow: 8px 5px 10px -2px #006bce30;
+		padding: 1.5rem 1.5rem 1.5rem 0;
+
+		ul {
+			padding: 0;
+			list-style: none;
+
+			& > * {
+				margin-bottom: 1rem;
+			}
+
+			li a {
+				text-decoration: none;
+				color: #3b413c;
+			}
+		}
+	}
+}
+
+.hidden {
+	display: none;
+	width: 0;
+}
