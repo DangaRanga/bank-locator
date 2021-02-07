@@ -32,7 +32,7 @@ function Menu() {
         <Link to="/">
           <li>Home</li>
         </Link>
-        <Link to="/seach">
+        <Link to="/search">
           <li>Search</li>
         </Link>
         <Link to="/banks">
