@@ -2,12 +2,12 @@ import React from "react";
 
 import Form from "../components/Form/Form";
 
-function Login() {
+function Signup() {
   return (
     <div>
-      <Form login={true}></Form>
+      <Form login={false}></Form>
     </div>
   );
 }
 
-export default Login;
+export default Signup;

@@ -7,6 +7,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 // Import pages
 import Browse from "../pages/Browse";
 import Login from "../pages/Login";
+import Signup from "../pages/Signup";
 import Home from "../pages/Home";
 
 function RoutesClient() {
@@ -17,6 +18,10 @@ function RoutesClient() {
         <Redirect to="/home"></Redirect>
       </Route>
       <Route path="/login" exact component={Login}></Route>
+      <Route path="/signup" exact component={Signup}></Route>
+      <Route path="/register" exact>
+        <Redirect to="/signup"></Redirect>
+      </Route>
       <Route path="/browse" exact component={Browse}></Route>
       <Redirect to="/" />
     </Switch>

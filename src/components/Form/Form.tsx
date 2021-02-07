@@ -1,6 +1,12 @@
+// React Imports
 import React, { useState } from "react";
 
-function Form({ login, headerIcon }: { login: boolean; headerIcon: string }) {
+// Component imports
+
+// CSS imports
+import "./Form.css";
+
+function Form({ login }: { login: boolean }) {
   const [formState, setFormState] = useState({
     login: true,
     email: "",
@@ -9,62 +15,83 @@ function Form({ login, headerIcon }: { login: boolean; headerIcon: string }) {
     bankName: "",
     isBank: true,
   });
+  // It would've been ideal to make the form field its own component
+  // But in the interest of time I just left it as is.
   return (
-    <div>
-      <img src={headerIcon}></img>
-      <h3>{login ? "Login" : "Sign Up"}</h3>
+    <div id="form-container">
+      <img
+        src={
+          formState.isBank ? "assets/agreement.svg" : "assets/location-icon.svg"
+        }
+        id="form-icon"
+      ></img>
+      <h1>{login ? "Login" : "Sign Up"}</h1>
+      <hr id="form-hr"></hr>
       <form>
-        <input
-          value={formState.email}
-          onChange={(e) =>
-            setFormState({
-              ...formState,
-              email: e.target.value,
-            })
-          }
-          type="email"
-          placeholder="Email Address"
-        />
-        {formState.isBank && login && (
+        <div className="input-field">
+          <img src=""></img>
           <input
-            value={formState.name}
+            value={formState.email}
             onChange={(e) =>
               setFormState({
                 ...formState,
-                name: e.target.value,
+                email: e.target.value,
               })
             }
-            type="text"
-            placeholder="Full Name"
+            type="email"
+            placeholder="Email Address"
           />
+        </div>
+        {formState.isBank && login && (
+          <div className="input-field">
+            <img src=""></img>
+            <input
+              value={formState.name}
+              onChange={(e) =>
+                setFormState({
+                  ...formState,
+                  name: e.target.value,
+                })
+              }
+              type="text"
+              placeholder="Full Name"
+            />
+          </div>
         )}
         {formState.isBank && (
+          <div className="input-field">
+            <img src=""></img>
+            <input
+              value={formState.bankName}
+              onChange={(e) =>
+                setFormState({
+                  ...formState,
+                  bankName: e.target.value,
+                })
+              }
+              type="text"
+              placeholder="Bank Name"
+            />
+          </div>
+        )}
+        <div className="input-field">
+          <img src=""></img>
           <input
-            value={formState.bankName}
+            value={formState.password}
             onChange={(e) =>
               setFormState({
                 ...formState,
-                bankName: e.target.value,
+                password: e.target.value,
               })
             }
-            type="text"
-            placeholder="Bank Name"
+            type="password"
+            placeholder="Password"
           />
-        )}
-        <input
-          value={formState.password}
-          onChange={(e) =>
-            setFormState({
-              ...formState,
-              password: e.target.value,
-            })
-          }
-          type="password"
-          placeholder="Password"
-        />
-        <button className=""> {login ? "Login" : "Sign Up"}</button>
-        <p>
-          If you are a {formState.isBank ? "customer" : "bank employee"} Sign in{" "}
+        </div>
+        <button className="form-btn"> {login ? "Login" : "Sign Up"}</button>
+        <p id="customer-toggle">
+          If you are a {formState.isBank ? "customer" : "bank employee"} Sign{" "}
+          {login ? "in" : "up"}{" "}
           <span
             id="clickable"
             onClick={(e) =>
