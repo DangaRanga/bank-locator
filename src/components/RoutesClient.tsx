@@ -25,7 +25,9 @@ function RoutesClient() {
         <Redirect to="/signup"></Redirect>
       </Route>
       <Route path="/banks" exact component={NearbyBanks}></Route>
-      <Route path="/browse" exact component={Browse}></Route>
+      <Route path="/browse" exact component={Browse}>
+        <Redirect to="/banks"></Redirect>
+      </Route>
       <Route path="/search" exact component={BankSearch}></Route>
       <Redirect to="/" />
     </Switch>
