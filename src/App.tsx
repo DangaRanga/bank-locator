@@ -1,10 +1,24 @@
-import React from 'react';
-import './App.css';
-import Home from './pages/home/home';
+// React Imports
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect,
+} from "react-router-dom";
+
+// Component Imports
+import RoutesClient from "./components/RoutesClient";
+
+// CSS Imports
+import "./App.css";
 
 function App() {
   return (
-    <Home></Home>
+    <div>
+      <RoutesClient />
+    </div>
   );
 }
 
