@@ -32,7 +32,7 @@
   grid-template-columns: auto 1fr 1fr 1fr;
   grid-template-rows: 0.8fr 0.7rem 0.8fr 0.8fr;
   column-gap: 0.5rem;
-  grid-template-areas: "img name name open" "img rating rating ." "img address address ." "img call message dist";
+  grid-template-areas: "img name name open" "img rating rating ." "img address address ." "img call message dist";
 }
 
 #banks-page #content .banks .list-tile .bank-pic {

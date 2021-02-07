@@ -32,7 +32,8 @@
     "dev-react": "yarn react-start",
     "dev-css": "nodemon -e css -x \"npm run autoprefix\"",
     "dev-scss": "nodemon -e sass,scss -x \"npm run scss\"",
-    "start": "concurrently \"npm run dev-scss\" && npm run dev-css && npm run dev-react"
+    "start": "concurrently \"npm run dev-scss\" && npm run dev-css && npm run dev-react",
+    "deploy": "npm run build && firebase deploy"
   },
   "eslintConfig": {
     "extends": [
