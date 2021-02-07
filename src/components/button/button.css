@@ -1,0 +1,19 @@
+.button {
+  display: inline-flex;
+  height: fit-content;
+  width: fit-content;
+  padding: 0.3rem 0.6rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.button.primary {
+  background-color: #1182D4;
+  color: #ffffff;
+}
+
+.button.accent {
+  background-color: #24BB71;
+  color: #ffffff;
+}
