@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import "./bottom_nav.css";
 import * as icons from "../icons/icons";
 import colours from "../../global/colours";

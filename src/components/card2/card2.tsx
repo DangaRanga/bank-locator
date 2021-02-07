@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./card.css";
+import "./card2.css";
 
 
 interface CardProps {

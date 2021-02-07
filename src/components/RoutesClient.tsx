@@ -8,7 +8,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import Browse from "../pages/Browse";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
-import Home from "../pages/Home";
+import Home from "../pages/home/home";
 
 function RoutesClient() {
   return (

@@ -1,9 +1,8 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import BottomNav from "../../components/bottom_nav/bottom_nav";
-import Card from "../../components/card/card";
+import Card from "../../components/card2/card2";
 import Chip from "../../components/chip/chip";
 import List from "../../components/list/list";
-import StarRating from "../../components/star_rating/star_rating";
 import TopNav from "../../components/top_nav/topnav";
 import "./home.css";
 import fimg1 from "../../assets/money_in_hand.jpg";

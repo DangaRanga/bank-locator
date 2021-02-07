@@ -1,4 +1,4 @@
-import {Component} from 'react';
+import React, {Component} from 'react';
 import './Card.css';
 import bank from './static/bank.jpg';
 import star from './static/star.svg';
