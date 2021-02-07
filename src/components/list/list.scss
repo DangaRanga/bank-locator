@@ -1,0 +1,22 @@
+.list {
+	display: flex;
+	justify-content: space-between;
+
+	&.horizontal {
+		flex-direction: row;
+		
+		overflow-x: auto;
+		& > * {
+			margin-right: 1rem;
+		}
+	}
+
+	&.vertical {
+		flex-direction: column;
+		overflow-y: auto;
+
+		& > * {
+			margin-bottom: 1rem;
+		}
+	}
+}

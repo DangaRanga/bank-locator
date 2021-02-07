@@ -1,0 +1,27 @@
+#top-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 4rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  width: 100%;
+}
+
+#top-nav div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#top-nav #profile-pic {
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+}

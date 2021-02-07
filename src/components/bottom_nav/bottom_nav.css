@@ -1,0 +1,20 @@
+#bottom-nav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #F5F5F5;
+  height: 3.5rem;
+}
+
+#bottom-nav #feature-home {
+  position: relative;
+  bottom: 1.75rem;
+  background-color: #1182D4;
+  padding: 1rem;
+  border-radius: 50%;
+  box-shadow: 0 8px 18px -2px #006bce30;
+}

@@ -9,7 +9,7 @@ import Browse from "../pages/Browse";
 import BankSearch from "../pages/BankSearch";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
-import Home from "../pages/Home";
+import Home from "../pages/home/home";
 
 function RoutesClient() {
   return (
