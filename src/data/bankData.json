@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1",
+    "name": "Yorkton Bank",
+    "location": {
+      "longitude": -102.462776,
+      "latitude": 51.21389
+    },
+    "description": "A bank with low maintainance fees and great customer service. Feel free to contact us below for more details!"
+  },
+  {
+    "id": "2",
+    "name": "Swift Current Bank",
+    "location": {
+      "longitude": -107.793892,
+      "latitude": 51.21389
+    },
+    "description": "A bank with low maintainance fees and great customer service. Feel free to contact us below for more details!"
+  },
+  {
+    "id": "3",
+    "name": "Warman Bank",
+    "location": {
+      "longitude": -106.584167,
+      "latitude": 51.21389
+    },
+    "description": "A bank with low maintainance fees and great customer service. Feel free to contact us below for more details!"
+  }
+]
