@@ -11,10 +11,16 @@
 
 #drawer #menu-items {
   transition: all 1s;
+  transform: translateX(0%);
   flex-grow: 1;
   background-color: white;
   box-shadow: 8px 5px 10px -2px #006bce30;
   padding: 1.5rem 1.5rem 1.5rem 0;
+}
+
+#drawer #menu-items.hidden {
+  transform: translateX(-100%);
+  box-shadow: 8px 5px 10px -2px #ffffff00;
 }
 
 #drawer #menu-items ul {
@@ -29,9 +35,4 @@
 #drawer #menu-items ul li a {
   text-decoration: none;
   color: #3b413c;
-}
-
-.hidden {
-  display: none;
-  width: 0;
 }

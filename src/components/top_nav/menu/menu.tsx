@@ -1,7 +1,9 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./menu.css";
 import * as icons from "../../icons/icons";
 import colours from "../../../global/colours";
+import { useState } from "react";
 
 interface MenuProps {}
 

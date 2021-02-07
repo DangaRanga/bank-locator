@@ -15,7 +15,7 @@ import bank3 from "../../assets/bank3.png";
 import bankData from "../../data/bankData.json";
 
 function BankSearch() {
-	var featuredBanks = [];
+  var featuredBanks = [];
 
 	for (const bank of bankData) {
 		featuredBanks.push(
