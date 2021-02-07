@@ -1,9 +1,11 @@
 import React from "react";
 
+import Form from "../components/Form/Form";
+
 function Login() {
   return (
     <div>
-      <h1> Login</h1>
+      <Form formType="bank"></Form>
     </div>
   );
 }
