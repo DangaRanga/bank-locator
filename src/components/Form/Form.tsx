@@ -1,20 +1,18 @@
 import React, { useState } from "react";
 
-function Form(
-  { formType }: { formType: string },
-  { headerIcon }: { headerIcon: string }
-) {
+function Form({ login, headerIcon }: { login: boolean; headerIcon: string }) {
   const [formState, setFormState] = useState({
     login: true,
     email: "",
     password: "",
     name: "",
     bankName: "",
+    isBank: true,
   });
   return (
     <div>
       <img src={headerIcon}></img>
-      <h3>{formState.login ? "Login" : "Sign Up"}</h3>
+      <h3>{login ? "Login" : "Sign Up"}</h3>
       <form>
         <input
           value={formState.email}
@@ -27,31 +25,31 @@ function Form(
           type="email"
           placeholder="Email Address"
         />
-        {formType === "bank" && (
-          <div id="bank-fields">
-            <input
-              value={formState.name}
-              onChange={(e) =>
-                setFormState({
-                  ...formState,
-                  name: e.target.value,
-                })
-              }
-              type="text"
-              placeholder="Full Name"
-            />
-            <input
-              value={formState.bankName}
-              onChange={(e) =>
-                setFormState({
-                  ...formState,
-                  bankName: e.target.value,
-                })
-              }
-              type="text"
-              placeholder="Bank Name"
-            />
-          </div>
+        {formState.isBank && login && (
+          <input
+            value={formState.name}
+            onChange={(e) =>
+              setFormState({
+                ...formState,
+                name: e.target.value,
+              })
+            }
+            type="text"
+            placeholder="Full Name"
+          />
+        )}
+        {formState.isBank && (
+          <input
+            value={formState.bankName}
+            onChange={(e) =>
+              setFormState({
+                ...formState,
+                bankName: e.target.value,
+              })
+            }
+            type="text"
+            placeholder="Bank Name"
+          />
         )}
         <input
           value={formState.password}
@@ -64,7 +62,22 @@ function Form(
           type="password"
           placeholder="Password"
         />
-        <button className=""> {formState.login ? "Login" : "Sign Up"}</button>
+        <button className=""> {login ? "Login" : "Sign Up"}</button>
+        <p>
+          If you are a {formState.isBank ? "customer" : "bank employee"} Sign in{" "}
+          <span
+            id="clickable"
+            onClick={(e) =>
+              setFormState({
+                ...formState,
+                isBank: !formState.isBank,
+              })
+            }
+          >
+            {" "}
+            here!{" "}
+          </span>
+        </p>
       </form>
     </div>
   );

@@ -5,7 +5,7 @@ import Form from "../components/Form/Form";
 function Login() {
   return (
     <div>
-      <Form formType="bank"></Form>
+      <Form headerIcon="" login={true}></Form>
     </div>
   );
 }
