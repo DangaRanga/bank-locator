@@ -1,14 +1,17 @@
 import React, { Component } from "react";
+import man from "../../assets/man.jpg";
+import fimg1 from "../../assets/money_in_hand.jpg";
+import fimg2 from "../../assets/money_tree.jpg";
+import woman from "../../assets/woman.jpg";
+import listTileImg1 from "../../assets/list_tile_img1.png";
+import listTileImg2 from "../../assets/list_tile_img2.png";
 import BottomNav from "../../components/bottom_nav/bottom_nav";
 import Card from "../../components/card2/card2";
 import Chip from "../../components/chip/chip";
 import List from "../../components/list/list";
+import ListTile from "../../components/list_tile/list_tile";
 import TopNav from "../../components/top_nav/topnav";
 import "./home.css";
-import fimg1 from "../../assets/money_in_hand.jpg";
-import fimg2 from "../../assets/money_tree.jpg";
-import woman from "../../assets/woman.jpg";
-import man from "../../assets/man.jpg";
 
 interface HomeProps {}
 
@@ -29,7 +32,7 @@ export class Home extends Component<HomeProps, HomeState> {
 				line1={<p>Saving 101 - Where to start</p>}
 				line2={
 					<div className="author">
-						<img src={man} className="author-img" alt="author" />
+						<img src={man} className="avatar" alt="author" />
 						<p>Jim Johnson</p>
 					</div>
 				}
@@ -39,11 +42,24 @@ export class Home extends Component<HomeProps, HomeState> {
 				line1={<p>Saving 101 - This is</p>}
 				line2={
 					<div className="author">
-						<img src={woman} className="author-img"  alt="author" />
+						<img src={woman} className="avatar" alt="author" />
 						<p>Stacy Smith</p>
 					</div>
 				}
-			/>
+			/>,
+		];
+
+		const blogs: any = [
+			<ListTile class="active">
+				<img className="tile-icon" src={listTileImg1} alt="" />
+				<p>Budgeting 101 - Saving for tomorrow</p>
+				<img src={man} className="avatar" alt="author" />
+			</ListTile>,
+			<ListTile>
+				<img className="tile-icon" src={listTileImg2} alt="" />
+				<p>Avoid Fraud - Keeping your account safe</p>
+				<img src={woman} className="avatar" alt="author" />
+			</ListTile>,
 		];
 
 		return (
@@ -62,11 +78,11 @@ export class Home extends Component<HomeProps, HomeState> {
 						class="articles"
 						elements={articles}
 					/>
-                    <div id="latest-blogs">
-                        <p className="section-title">Latest Blogs</p>
-                        <p className="link">View All</p>
-
-                    </div>
+					<div id="latest-blogs">
+						<p className="section-title">Latest Blogs</p>
+						<p className="link">View All</p>
+					</div>
+					<List class="blogs" direction="vertical" elements={blogs} />
 				</div>
 				<BottomNav></BottomNav>
 			</div>

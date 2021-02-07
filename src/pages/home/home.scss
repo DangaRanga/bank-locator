@@ -36,17 +36,15 @@
 			font-size: 1.15rem;
 		}
 
-		.categories {
-			max-width: calc(100% -32px);
+		.avatar {
+			height: 24px;
+			width: 24px;
+			object-fit: cover;
+			border-radius: 50%;
 		}
 
 		.articles {
-			.author-img {
-				height: 24px;
-				width: 24px;
-				object-fit: cover;
-				border-radius: 50%;
-			}
+			
 
 			.author {
 				display: flex;
@@ -72,6 +70,25 @@
 				font-size: 0.7rem;
 				font-weight: 600;
 				color: #1182d4;
+			}
+		}
+
+		.blogs{
+			margin-right: 2rem;
+			.list-tile{
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				align-items: center;
+				font-weight: 600;
+				font-size: 0.8rem;
+
+				.tile-icon{
+					width:40px;
+					height:40px;
+					margin-right: 0.5rem;
+				}
+
 			}
 		}
 	}

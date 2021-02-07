@@ -7,6 +7,10 @@
   white-space: nowrap;
 }
 
+.chip p {
+  display: inline;
+}
+
 .chip.active {
   background-color: #1182d4;
   color: #ffffff;

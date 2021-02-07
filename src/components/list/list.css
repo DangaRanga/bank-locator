@@ -1,10 +1,7 @@
-.list {
-  display: flex;
-  justify-content: space-between;
-}
-
 .list.horizontal {
+  display: flex;
   flex-direction: row;
+  justify-content: space-between;
   overflow-x: auto;
 }
 
@@ -13,10 +10,9 @@
 }
 
 .list.vertical {
-  flex-direction: column;
+  display: grid;
+  grid-auto-rows: min-content;
+  grid-auto-columns: 1fr;
+  row-gap: 1rem;
   overflow-y: auto;
-}
-
-.list.vertical > * {
-  margin-bottom: 1rem;
 }
