@@ -46,7 +46,6 @@ function BankMap() {
           ))}
         </MapContainer>
       </div>
-      <h3 className="map-header"> Find Banks near you</h3>
     </div>
   );
 }

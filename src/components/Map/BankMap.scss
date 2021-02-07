@@ -18,9 +18,10 @@
   justify-content: center;
 }
  */
+
 .map-header {
-  font-size: 1.15rem;
-  color: #3b413c;
+	font-size: 1.15rem;
+	color: #3b413c;
 }
 
 .map-wrapper {
@@ -29,14 +30,14 @@
 
 .leaflet-container {
   height: 100%;
-  width: 100%;
+  width:100%;
 }
 
 .bank-name {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 .map-container {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
