@@ -10,6 +10,7 @@ import BankSearch from "../pages/BankSearch";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
 import Home from "../pages/home/home";
+import NearbyBanks from "../pages/nearby_banks/nearby_banks";
 
 function RoutesClient() {
   return (
@@ -23,6 +24,7 @@ function RoutesClient() {
       <Route path="/register" exact>
         <Redirect to="/signup"></Redirect>
       </Route>
+      <Route path="/banks" exact component={NearbyBanks}></Route>
       <Route path="/browse" exact component={Browse}></Route>
       <Route path="/search" exact component={BankSearch}></Route>
       <Redirect to="/" />

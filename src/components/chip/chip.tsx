@@ -11,13 +11,13 @@ interface ChipState {}
 export class Chip extends Component<ChipProps, ChipState> {
 	render() {
 		return (
-			<div
+			<span
 				className={`chip${
 					this.props.class ? " " + this.props.class : ""
 				}`}
 			>
 				<p>{this.props.text}</p>
-			</div>
+			</span>
 		);
 	}
 }

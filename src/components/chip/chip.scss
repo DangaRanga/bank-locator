@@ -7,6 +7,10 @@
     padding: 0.3rem 1rem;
     white-space: nowrap;
 
+	p{
+		display: inline;
+	}
+
 	&.active {
 		background-color: #1182d4;
 		color: #ffffff;
