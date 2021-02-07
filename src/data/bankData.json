@@ -6,7 +6,8 @@
       "longitude": -102.462776,
       "latitude": 51.21389
     },
-    "description": "A bank with low maintainance fees and great customer service. Feel free to contact us below for more details!"
+    "description": "A bank with low maintainance fees and great customer service. Feel free to contact us below for more details!",
+    "imgUrl": "assets/bank1.png"
   },
   {
     "id": "2",
@@ -15,7 +16,8 @@
       "longitude": -107.793892,
       "latitude": 51.21389
     },
-    "description": "A bank with low maintainance fees and great customer service. Feel free to contact us below for more details!"
+    "description": "The fastest bank in Canada",
+    "imgUrl": "assets/bank2.png"
   },
   {
     "id": "3",
@@ -24,6 +26,7 @@
       "longitude": -106.584167,
       "latitude": 51.21389
     },
-    "description": "A bank with low maintainance fees and great customer service. Feel free to contact us below for more details!"
+    "description": "Owned by Zeke Yeager, this bank provides 0 maintainance fees and excellent interest",
+    "imgUrl": "assets/bank3.png"
   }
 ]

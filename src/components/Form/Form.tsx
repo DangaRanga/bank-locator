@@ -1,5 +1,6 @@
 // React Imports
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 // Component imports
 
@@ -7,6 +8,7 @@ import React, { useState } from "react";
 import "./Form.css";
 
 function Form({ login }: { login: boolean }) {
+  const history = useHistory();
   const [formState, setFormState] = useState({
     login: true,
     email: "",
@@ -85,7 +87,10 @@ function Form({ login }: { login: boolean }) {
             placeholder="Password"
           />
         </div>
-        <button className="form-btn"> {login ? "Login" : "Sign Up"}</button>
+        <button className="form-btn" onClick={(e) => history.push("/home")}>
+          {" "}
+          {login ? "Login" : "Sign Up"}
+        </button>
         <p id="customer-toggle">
           If you are a {formState.isBank ? "customer" : "bank employee"} Sign{" "}
           {login ? "in" : "up"}{" "}

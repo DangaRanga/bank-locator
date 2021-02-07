@@ -17,14 +17,15 @@ interface TopNavState {
 export class TopNav extends Component<TopNavProps,TopNavState> {
     render() {
         return (
-            <nav
-            id="top-nav"
+            <div
+            id="top-nav-bar"
             >
                 <Menu></Menu>
-                <div>{icons.Search(colours.grey3, "24px")}
+                
+                <nav id="top-nav">{icons.Search(colours.grey3, "24px")}
                 <img id="profile-pic" src={profilepic} alt="profile"/>
-                </div>
-            </nav>
+                </nav>
+            </div>
         );
     }
 }
