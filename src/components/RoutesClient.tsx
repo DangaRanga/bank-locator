@@ -6,7 +6,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 
 // Import pages
 import Browse from "../pages/Browse";
-import BankSearch from "../pages/BankSearch";
+import BankSearch from "../pages/bank_search/BankSearch";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
 import Home from "../pages/home/home";

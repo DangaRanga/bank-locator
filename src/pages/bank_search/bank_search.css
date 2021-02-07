@@ -1,0 +1,94 @@
+#bank-search {
+  width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 4rem 1fr 3.5rem;
+  grid-template-areas: "top" "content" "bottom";
+}
+
+#bank-search #top-nav {
+  grid-area: top;
+}
+
+#bank-search #content {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-width: 100vw;
+  max-height: 100%;
+  overflow: auto;
+  margin-bottom: 3.5rem;
+  grid-area: content;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-rows: auto min-content 0.35fr;
+  row-gap: 1rem;
+}
+
+#bank-search #content .map-container {
+  height: 100%;
+  width: 100%;
+}
+
+#bank-search #content h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.1rem;
+  color: #3b413c;
+}
+
+#bank-search #content .featured-banks .list-tile {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr 1fr;
+  grid-template-rows: 0.8fr 0.7rem 0.8fr 0.8fr;
+  column-gap: 0.5rem;
+  grid-template-areas: "img name name open" "img rating rating ." "img address address ." "img call message dist";
+}
+
+#bank-search #content .featured-banks .list-tile .bank-pic {
+  grid-area: img;
+  height: 6rem;
+  width: auto;
+  object-fit: cover;
+}
+
+#bank-search #content .featured-banks .list-tile .bank-name {
+  grid-area: name;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+#bank-search #content .featured-banks .list-tile .star-rating {
+  grid-area: rating;
+}
+
+#bank-search #content .featured-banks .list-tile .bank-address {
+  font-size: 0.6rem;
+  grid-area: address;
+}
+
+#bank-search #content .featured-banks .list-tile .button {
+  font-size: 0.7rem;
+}
+
+#bank-search #content .featured-banks .list-tile .call-bank {
+  grid-area: call;
+}
+
+#bank-search #content .featured-banks .list-tile .message-bank {
+  grid-area: message;
+}
+
+#bank-search #content .featured-banks .list-tile .distance {
+  font-size: 0.5rem;
+  grid-area: dist;
+}
+
+#bank-search #content .featured-banks .list-tile .more-info {
+  grid-area: open;
+}
+
+#bank-search #bottom-nav {
+  grid-area: bottom;
+}
