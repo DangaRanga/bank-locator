@@ -1,6 +1,7 @@
 .leaflet-container {
   height: 50vh;
   width: 80vw;
+  margin-bottom: 20px;
 }
 
 .bank-name {

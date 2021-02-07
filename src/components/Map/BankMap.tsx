@@ -1,15 +1,20 @@
 import React, { useEffect } from "react";
-import L, { Icon } from "leaflet";
+import { Icon } from "leaflet";
 
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
-// Using tesla data until we can get bank data
+import Card from "../Card/Card";
+// Using some random bank data
 import locationData from "../../data/bankData.json";
 
 // CSS imports
 import "./BankMap.css";
 function BankMap() {
+  const markerIcon = new Icon({
+    iconUrl: "assets/location-icon.svg",
+    iconSize: [35, 40],
+  });
   return (
     <div className="map-container">
       <h3 className="map-header"> Find Banks near you</h3>
@@ -30,7 +35,7 @@ function BankMap() {
                 bankLocation.location.latitude,
                 bankLocation.location.longitude,
               ]}
-              icon={new Icon({ iconUrl: "assets/location-icon.svg" })}
+              icon={markerIcon}
             >
               <Popup>
                 <p className="bank-name">{bankLocation.name}</p>
@@ -41,6 +46,7 @@ function BankMap() {
           ))}
         </MapContainer>
       </div>
+      <h3 className="map-header"> Find Banks near you</h3>
     </div>
   );
 }
