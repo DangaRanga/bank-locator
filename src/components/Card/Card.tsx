@@ -3,14 +3,22 @@ import "./Card.css";
 
 const bank = "assets/bank.jpg";
 const star = "assets/star.svg";
-function Card() {
+function Card({
+  bankImg,
+  name,
+  description,
+}: {
+  bankImg: string;
+  name: string;
+  description: string;
+}) {
   return (
     <section>
-      <img src={bank} alt="bank" />
+      <img src={bankImg} alt="bank" />
       <div>
         <div className="box-1">
           <div>
-            <p>Some Random Bank</p>
+            <p>{name}</p>
             <div className="stars">
               <img src={star} alt="stars" />
               <img src={star} alt="stars" />
@@ -23,7 +31,7 @@ function Card() {
             Open
           </button>
         </div>
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <p>{description}</p>
         <div className="box-2">
           <button className="blue" onClick={() => null}>
             Call

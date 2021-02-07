@@ -7,8 +7,13 @@ import locationData from "../../data/bankData.json";
 function Featured() {
   return (
     <div>
-      <Card></Card>
-      <Card></Card>
+      {locationData.map((bankLocation) => (
+        <Card
+          bankImg={bankLocation.imgUrl}
+          description={bankLocation.description}
+          name={bankLocation.name}
+        ></Card>
+      ))}
     </div>
   );
 }
